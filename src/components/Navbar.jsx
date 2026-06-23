@@ -1,9 +1,11 @@
 import { NavLink } from "react-router-dom";
 import { FaRecycle } from "react-icons/fa";
 import { useEffect, useState } from "react";
+import { FaBars, FaTimes } from "react-icons/fa";
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -84,11 +86,46 @@ const Navbar = () => {
           </li>
         </ul>
 
+        <button
+          className="mobile-menu-btn"
+          onClick={() => setMenuOpen(!menuOpen)}
+        >
+          {menuOpen ? <FaTimes /> : <FaBars />}
+        </button>
+
         {/* CTA */}
         <NavLink to="/join" className="navbar-btn">
           Join Movement
         </NavLink>
       </div>
+
+      {menuOpen && (
+        <div className="mobile-menu">
+          <NavLink to="/" className="mobile-link" onClick={()=>setMenuOpen(false)}>
+            Home
+          </NavLink>
+
+          <NavLink to="/facts" className="mobile-link" onClick={()=>setMenuOpen(false)}>
+            Facts
+          </NavLink>
+
+          <NavLink to="/effects" className="mobile-link" onClick={()=>setMenuOpen(false)}>
+            Effects
+          </NavLink>
+
+          <NavLink to="/alternatives" className="mobile-link" onClick={()=>setMenuOpen(false)}>
+            Alternatives
+          </NavLink>
+
+          <NavLink to="/take-action" className="mobile-link" onClick={()=>setMenuOpen(false)}>
+            Take Action
+          </NavLink>
+
+          <NavLink to="/join" className="mobile-cta" onClick={()=>setMenuOpen(false)}>
+            Join Movement
+          </NavLink>
+        </div>
+      )}
     </nav>
   );
 };

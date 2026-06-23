@@ -15,7 +15,7 @@
 
   --border: rgba(255,255,255,0.15);
 
-  --navbar-bg: rgba(255,255,255,0.12);
+  --navbar-bg: rgba(255,255,255,0.15);
 }
 
 /* Navbar - Component */
@@ -50,7 +50,7 @@
 }
 
 .navbar-links {
-  @apply hidden md:flex items-center gap-8;
+  @apply hidden lg:flex items-center gap-8;
 }
 
 .nav-link {
@@ -81,7 +81,8 @@
 }
 
 .navbar-btn {
-  @apply px-5 py-2.5
+  @apply hidden lg:inline-flex
+  px-5 py-2.5
   rounded-full
   font-semibold
   text-[color:var(--button-text)]
@@ -90,8 +91,43 @@
 }
 
 .navbar-btn:hover {
-  @apply bg-[color:var(--secondary)]
+  @apply bg-[var(--secondary)]
   -translate-y-0.5;
+}
+
+.mobile-menu-btn {
+  @apply lg:hidden
+  text-2xl
+  text-[var(--heading)];
+}
+
+.mobile-menu {
+  @apply lg:hidden
+  flex flex-col items-center
+  gap-4
+  px-6 pb-6
+  bg-[var(--navbar-bg)]
+  backdrop-blur-lg;
+}
+
+.mobile-link {
+  @apply py-2
+  text-[color:var(--text)]
+  font-medium;
+}
+
+.mobile-link:hover {
+  @apply text-[var(--primary)];
+}
+
+.mobile-cta {
+  @apply mt-2
+  text-center
+  p-3
+  rounded-full
+  font-semibold
+  text-[var(--button-text)]
+  bg-[var(--primary)];
 }
 
 /* Footer - Component */
