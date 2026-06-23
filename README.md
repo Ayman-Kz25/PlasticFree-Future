@@ -1,16 +1,50 @@
-# React + Vite
+# 🌍 PlasticFree Future
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A responsive React.js website built to raise awareness about plastic pollution and encourage sustainable lifestyle choices.
 
-Currently, two official plugins are available:
+## 🚀 Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- Multi-page layout using React Router
+- Facts, Effects, and Eco-Friendly Alternatives sections
+- Awareness-focused UI design
+- Join Movement contact page (email integration)
+- Responsive and clean NGO-style interface
 
-## React Compiler
+## 🛠 Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- React.js
+- React Router DOM
+- Tailwind CSS
+- JavaScript (ES6)
+- React Icons
 
-## Expanding the ESLint configuration
+## 🎯 Purpose
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+This project was created as part of a community service initiative to spread awareness about environmental pollution and promote actionable solutions through a simple web platform.
+
+## 📸 Pages
+
+- Home (Hero Section)
+- Facts about Plastic Pollution
+- Environmental Effects
+- Eco-Friendly Alternatives
+- Take Action Page
+- Join Movement (Contact Form)
+
+## 📌 Getting Started
+
+```bash
+npm install
+npm run dev
+```
+
+## 🌱 Impact
+
+The website is designed to educate users and encourage small but meaningful actions toward reducing plastic waste.
+
+## 📬 Contact
+
+- #### Created by:
+  Ayman Kz
+- #### Project:
+  CSR Forum Pakistan - A Community Service Program
