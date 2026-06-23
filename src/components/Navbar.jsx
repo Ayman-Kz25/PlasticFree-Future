@@ -1,11 +1,25 @@
 import { NavLink } from "react-router-dom";
 import { FaRecycle } from "react-icons/fa";
+import { useEffect, useState } from "react";
 
 const Navbar = () => {
-  return (
-    <nav className="navbar">
-      <div className="navbar-container">
+  const [scrolled, setScrolled] = useState(false);
 
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 50);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+  return (
+    <nav className={`navbar ${scrolled ? "navbar-scrolled" : ""}`}>
+      <div className="navbar-container">
         {/* Logo */}
         <div className="navbar-logo">
           <FaRecycle className="logo-icon" />
@@ -14,7 +28,6 @@ const Navbar = () => {
 
         {/* Links */}
         <ul className="navbar-links">
-
           <li>
             <NavLink
               to="/"
@@ -69,14 +82,12 @@ const Navbar = () => {
               Take Action
             </NavLink>
           </li>
-
         </ul>
 
         {/* CTA */}
         <NavLink to="/join" className="navbar-btn">
           Join Movement
         </NavLink>
-
       </div>
     </nav>
   );

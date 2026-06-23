@@ -4,25 +4,49 @@
   @apply m-0 p-0 box-border;
 }
 
+:root {
+  --primary: #7bc8c4;
+  --secondary: #9dd9d2;
+
+  --heading: #213547;
+  --text: #475569;
+
+  --button-text: #ffffff;
+
+  --border: rgba(255,255,255,0.15);
+
+  --navbar-bg: rgba(255,255,255,0.12);
+}
+
 /* Navbar - Component */
 .navbar {
-  @apply w-full bg-white shadow-sm sticky top-0 z-50;
+  @apply fixed top-0 left-0 z-50 w-full
+  bg-transparent
+  backdrop-blur-md;
+}
+
+.navbar-scrolled {
+  @apply bg-[color:var(--navbar-bg)]
+  border-b
+  border-[color:var(--border)];
 }
 
 .navbar-container {
-  @apply max-w-6xl mx-auto flex items-center justify-between px-6 py-4;
+  @apply max-w-7xl mx-auto
+  flex items-center justify-between
+  px-6 lg:px-8 py-4;
 }
 
 .navbar-logo {
-  @apply flex items-center gap-2;
+  @apply flex items-center gap-3;
 }
 
 .logo-icon {
-  @apply text-green-600 text-2xl;
+  @apply text-3xl text-[color:var(--primary)];
 }
 
 .navbar-logo h1 {
-  @apply text-xl font-bold text-green-700;
+  @apply text-xl font-bold text-[color:var(--heading)];
 }
 
 .navbar-links {
@@ -30,15 +54,44 @@
 }
 
 .nav-link {
-  @apply text-gray-700 font-medium transition duration-300 hover:text-green-600;
+  @apply font-medium
+  text-[color:var(--text)]
+  transition-all duration-300;
+}
+
+.nav-link:hover {
+  @apply text-[color:var(--secondary)];
 }
 
 .nav-active {
-  @apply text-green-600 font-semibold border-b-2 border-green-600 pb-1;
+  @apply relative
+  font-semibold
+  text-[color:var(--primary)];
+}
+
+.nav-active::after {
+  content: "";
+  @apply absolute
+  left-0
+  -bottom-2
+  h-[3px]
+  w-full
+  rounded-full
+  bg-[color:var(--secondary)];
 }
 
 .navbar-btn {
-  @apply bg-green-600 text-white px-5 py-2 rounded-lg font-medium transition duration-300 hover:bg-green-700;
+  @apply px-5 py-2.5
+  rounded-full
+  font-semibold
+  text-[color:var(--button-text)]
+  bg-[color:var(--primary)]
+  transition-all duration-300;
+}
+
+.navbar-btn:hover {
+  @apply bg-[color:var(--secondary)]
+  -translate-y-0.5;
 }
 
 /* Footer - Component */
@@ -59,11 +112,11 @@
 }
 
 .footer-icon {
-  @apply text-green-600 text-2xl;
+  @apply text-[var(--secondary)] text-2xl;
 }
 
 .footer-logo h2 {
-  @apply text-lg font-bold text-green-700;
+  @apply text-lg font-bold text-[var(--primary)];
 }
 
 .footer-brand p {
@@ -71,11 +124,11 @@
 }
 
 .footer-links {
-  @apply flex flex-col md:flex-row gap-3 md:gap-6 text-gray-700 font-medium;
+  @apply flex flex-col md:flex-row gap-3 md:gap-6 text-[var(--text)] font-medium;
 }
 
 .footer-links a {
-  @apply hover:text-green-600 transition;
+  @apply hover:text-[var(--secondary)] transition;
 }
 
 .footer-bottom {
@@ -92,7 +145,7 @@
 }
 
 .home-title {
-  @apply text-4xl md:text-5xl font-bold text-green-800 mb-4;
+  @apply text-4xl md:text-5xl font-bold text-[var(--primary)] mb-4;
 }
 
 .home-subtitle {
@@ -108,7 +161,7 @@
 }
 
 .home-btn.secondary {
-  @apply border border-green-600 text-green-700 px-6 py-3 rounded-lg font-medium hover:bg-green-50 transition;
+  @apply border border-green-600 text-[var(--primary)] px-6 py-3 rounded-lg font-medium hover:bg-green-50 transition;
 }
 
 .home-scroll {
