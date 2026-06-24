@@ -156,7 +156,7 @@
 
 /* Home - Page */
 .home {
-  @apply min-h-screen flex items-center relative;
+  @apply min-h-screen flex items-center relative overflow-hidden;
   background-image: url("https://res.cloudinary.com/dhjf7rok5/image/upload/v1782301574/samples/ChatGPT_Image_Jun_24_2026_04_45_07_PM_uj3mxc.png");
   background-size: cover;
   background-position: center;
@@ -165,28 +165,79 @@
 .home::before {
   content: "";
   @apply absolute inset-0;
-  background: rgba(255, 255, 255, -0.3);
+  background: rgba(0, 0, 0, 0.35);
 }
 
 .home-container {
-  @apply relative flex flex-col items-center lg:items-start z-10 text-center lg:text-left mx-3 lg:mx-0 lg:ml-20;
+  @apply relative z-10
+  w-full
+  max-w-7xl
+  mx-auto
+  px-5 md:px-8 lg:px-12;
 }
+
+.home-content {
+  @apply max-w-3xl
+  p-6 md:p-8 lg:p-10
+  rounded-3xl
+  backdrop-blur-sm
+  bg-white/5
+  border border-white/10;
+}
+
+/* Badge */
+
+.home-badge {
+  @apply inline-flex items-center gap-2
+  px-4 py-2
+  rounded-full
+  bg-green-800/80
+  text-white
+  text-sm
+  font-medium
+  mb-6;
+}
+
+/* Title */
 
 .home-title {
-  @apply text-4xl md:text-5xl font-bold mb-4 text-gray-50 text-shadow-2xs text-shadow-green-800;
+  @apply text-4xl
+  sm:text-5xl
+  lg:text-6xl
+  font-bold
+  text-white
+  leading-tight
+  mb-5;
 }
+
+/* Subtitle */
 
 .home-subtitle {
-  @apply text-lg md:text-xl leading-relaxed mb-8 max-w-2xl text-white text-shadow-2xs text-shadow-green-700;
-  opacity: 0.85;
+  @apply text-base
+  sm:text-lg
+  lg:text-xl
+  text-white/90
+  leading-relaxed
+  max-w-2xl
+  mb-8;
 }
 
+/* Buttons */
+
 .home-buttons {
-  @apply flex flex-col md:flex-row items-center justify-center gap-4;
+  @apply flex
+  flex-col
+  sm:flex-row
+  gap-4;
 }
 
 .home-btn.primary {
-  @apply bg-green-800 text-white px-6 py-3 rounded-full font-medium transition-all duration-300;
+  @apply bg-green-800
+  text-white
+  px-7 py-3
+  rounded-full
+  font-semibold
+  transition-all duration-300;
 }
 
 .home-btn.primary:hover {
@@ -194,11 +245,28 @@
 }
 
 .home-btn.secondary {
-  @apply px-6 py-3 rounded-full border border-white text-white font-medium duration-300 transition-all;
+  @apply border
+  border-white
+  text-white
+  px-7 py-3
+  rounded-full
+  font-semibold
+  transition-all duration-300;
 }
 
 .home-btn.secondary:hover {
-  @apply bg-green-800 border-green-800 scale-105;
+  @apply bg-white
+  text-green-900;
+}
+
+@keyframes bounceScroll {
+  0%, 100% {
+    transform: translateX(-50%) translateY(0);
+  }
+
+  50% {
+    transform: translateX(-50%) translateY(8px);
+  }
 }
 
 /* Facts - Page */
@@ -279,7 +347,6 @@
 }
 
 /* Effects - Page */
-/* Effects Page */
 
 .effects {
   @apply bg-white py-24 md:py-32 px-4 sm:px-6;
@@ -288,8 +355,6 @@
 .effects-container {
   @apply max-w-6xl mx-auto;
 }
-
-/* Header */
 
 .effects-header {
   @apply text-center max-w-4xl mx-auto mb-20;
@@ -318,8 +383,6 @@
   text-gray-600
   leading-relaxed;
 }
-
-/* Timeline */
 
 .impact-timeline {
   @apply relative max-w-4xl mx-auto;
@@ -371,8 +434,6 @@
   @apply text-gray-600
   leading-relaxed;
 }
-
-/* Bottom Message */
 
 .effects-message {
   @apply mt-16 md:mt-24
@@ -489,8 +550,6 @@
 }
 
 /* TakeAction - Page */
-/* Take Action */
-
 .take-action {
   @apply bg-white py-24 md:py-32 px-4 sm:px-6;
 }
@@ -498,8 +557,6 @@
 .take-action-container {
   @apply max-w-7xl mx-auto;
 }
-
-/* Header */
 
 .take-action-header {
   @apply text-center max-w-4xl mx-auto mb-20;
@@ -530,8 +587,6 @@
   mx-auto
   leading-relaxed;
 }
-
-/* Cards */
 
 .action-grid {
   @apply grid
@@ -579,8 +634,6 @@
   @apply text-gray-600
   leading-relaxed;
 }
-
-/* Commitment Box */
 
 .commitment-box {
   @apply bg-green-800

@@ -1,4 +1,5 @@
 import { NavLink } from "react-router-dom";
+import { FaLeaf } from "react-icons/fa";
 
 const Home = () => {
   return (
@@ -6,24 +7,43 @@ const Home = () => {
 
       <div className="home-container">
 
-        <h1 className="home-title">
-          Plastic Pollution Awareness
-        </h1>
+        <div className="home-content">
 
-        <p className="home-subtitle">
-          Small actions create big environmental impact.
-          Together we can reduce plastic waste and protect our planet.
-        </p>
+          <span className="home-badge">
+            <FaLeaf />
+            Protect Our Planet
+          </span>
 
-        <div className="home-buttons">
-          <NavLink to="/facts" className="home-btn primary">
-            Explore Facts
-          </NavLink>
+          <h1 className="home-title">
+            Plastic Pollution Awareness
+          </h1>
 
-          <NavLink to="/take-action" className="home-btn secondary">
-            Take Action
-          </NavLink>
+          <p className="home-subtitle">
+            Small actions create big environmental impact.
+            Together we can reduce plastic waste, protect wildlife
+            and create a cleaner future for generations to come.
+          </p>
+
+          <div className="home-buttons">
+
+            <NavLink
+              to="/facts"
+              className="home-btn primary"
+            >
+              Explore Facts
+            </NavLink>
+
+            <NavLink
+              to="/take-action"
+              className="home-btn secondary"
+            >
+              Take Action
+            </NavLink>
+
+          </div>
+
         </div>
+
       </div>
 
     </section>
