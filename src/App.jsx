@@ -7,10 +7,12 @@ import Effects from "./pages/Effects";
 import Alternatives from "./pages/Alternatives";
 import TakeAction from "./pages/TakeAction";
 import Join from "./pages/Join";
+import ScrollToTop from "./components/ScrollToTop";
 
 function App() {
   return (
     <>
+    <ScrollToTop />
       <Routes>
         <Route element={<Layout />}>
           <Route path="/" element={<Home />} />
