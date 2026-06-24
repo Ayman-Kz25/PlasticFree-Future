@@ -1,53 +1,92 @@
+import {
+  FaWater,
+  FaFish,
+  FaSeedling,
+  FaHeartbeat,
+  FaGlobe,
+} from "react-icons/fa";
+
+const effectsData = [
+  {
+    icon: <FaWater />,
+    title: "Ocean Pollution",
+    text: "Millions of tons of plastic waste enter oceans every year, creating floating garbage patches and disrupting marine ecosystems.",
+  },
+  {
+    icon: <FaFish />,
+    title: "Marine Life Harm",
+    text: "Sea turtles, whales, birds and fish often mistake plastic for food, causing injury, starvation and death.",
+  },
+  {
+    icon: <FaSeedling />,
+    title: "Soil Contamination",
+    text: "Plastic waste breaks into tiny particles and releases chemicals that reduce soil quality and agricultural productivity.",
+  },
+  {
+    icon: <FaHeartbeat />,
+    title: "Human Health Risks",
+    text: "Microplastics are now found in drinking water, food and even the human body.",
+  },
+  {
+    icon: <FaGlobe />,
+    title: "Climate Impact",
+    text: "Plastic production and disposal release greenhouse gases that contribute to global warming.",
+  },
+];
+
 const Effects = () => {
   return (
     <section className="effects">
 
       <div className="effects-container">
 
-        <h1 className="effects-title">
-          Effects of Plastic Pollution
-        </h1>
+        <div className="effects-header">
 
-        <p className="effects-subtitle">
-          Plastic waste is not just an environmental issue — it affects every form of life on Earth.
-        </p>
+          <span className="effects-badge">
+            The Ripple Effect
+          </span>
 
-        <div className="effects-grid">
+          <h1 className="effects-title">
+            One Plastic Bottle Can Affect Far More Than You Think
+          </h1>
 
-          <div className="effect-card">
-            <h3>Ocean Pollution</h3>
-            <p>
-              Millions of tons of plastic waste enter oceans every year, creating massive garbage patches and damaging ecosystems.
-            </p>
-          </div>
+          <p className="effects-subtitle">
+            Plastic pollution doesn't stop where it is thrown away.
+            Its impact travels through oceans, wildlife, ecosystems,
+            communities and future generations.
+          </p>
 
-          <div className="effect-card">
-            <h3>Marine Life Harm</h3>
-            <p>
-              Sea animals often mistake plastic for food, leading to injury, starvation, and death.
-            </p>
-          </div>
+        </div>
 
-          <div className="effect-card">
-            <h3>Soil Contamination</h3>
-            <p>
-              Plastic chemicals seep into the soil, reducing fertility and harming agriculture.
-            </p>
-          </div>
+        <div className="impact-timeline">
 
-          <div className="effect-card">
-            <h3>Human Health Risks</h3>
-            <p>
-              Microplastics enter the food chain and may cause long-term health issues in humans.
-            </p>
-          </div>
+          {effectsData.map((effect, index) => (
+            <div className="impact-item" key={index}>
 
-          <div className="effect-card">
-            <h3>Climate Impact</h3>
-            <p>
-              Plastic production and burning release greenhouse gases, contributing to climate change.
-            </p>
-          </div>
+              <div className="impact-icon">
+                {effect.icon}
+              </div>
+
+              <div className="impact-content">
+                <h3>{effect.title}</h3>
+                <p>{effect.text}</p>
+              </div>
+
+            </div>
+          ))}
+
+        </div>
+
+        <div className="effects-message">
+
+          <h2>
+            Every Piece of Plastic Has a Story
+          </h2>
+
+          <p>
+            The choices we make today determine the health of our oceans,
+            wildlife and communities tomorrow.
+          </p>
 
         </div>
 

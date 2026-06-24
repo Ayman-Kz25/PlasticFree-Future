@@ -1,58 +1,116 @@
+import {
+  FaTint,
+  FaShoppingBag,
+  FaLeaf,
+  FaBoxOpen,
+  FaBan,
+} from "react-icons/fa";
+
+const alternatives = [
+  {
+    icon: <FaTint />,
+    title: "Reusable Water Bottle",
+    impact: "High Impact",
+    difficulty: "Easy",
+    text: "Carry a reusable bottle and avoid purchasing single-use plastic bottles.",
+  },
+  {
+    icon: <FaShoppingBag />,
+    title: "Cloth Shopping Bags",
+    impact: "High Impact",
+    difficulty: "Easy",
+    text: "Keep reusable bags with you for grocery shopping and daily errands.",
+  },
+  {
+    icon: <FaLeaf />,
+    title: "Bamboo & Metal Straws",
+    impact: "Medium Impact",
+    difficulty: "Easy",
+    text: "Replace disposable plastic straws with reusable alternatives.",
+  },
+  {
+    icon: <FaBoxOpen />,
+    title: "Refillable Containers",
+    impact: "High Impact",
+    difficulty: "Medium",
+    text: "Store food and household items in reusable containers instead of disposable packaging.",
+  },
+  {
+    icon: <FaBan />,
+    title: "Avoid Single Use Plastics",
+    impact: "Very High Impact",
+    difficulty: "Medium",
+    text: "Say no to disposable cups, cutlery, plates and unnecessary plastic packaging.",
+  },
+];
+
 const Alternatives = () => {
   return (
     <section className="alternatives">
 
       <div className="alternatives-container">
 
-        <h1 className="alternatives-title">
-          Eco-Friendly Alternatives
-        </h1>
+        <div className="alternatives-header">
 
-        <p className="alternatives-subtitle">
-          Small lifestyle changes can significantly reduce plastic pollution.
-        </p>
+          <span className="alternatives-badge">
+            Start Today
+          </span>
+
+          <h1 className="alternatives-title">
+            Small Habits. Big Environmental Impact.
+          </h1>
+
+          <p className="alternatives-subtitle">
+            You don't need to change everything overnight.
+            A few simple choices can significantly reduce plastic waste.
+          </p>
+
+        </div>
 
         <div className="alternatives-grid">
 
-          <div className="alt-card">
-            <h3>Reusable Water Bottles</h3>
-            <p>
-              Replace single-use plastic bottles with durable reusable ones to reduce waste daily.
-            </p>
-          </div>
+          {alternatives.map((item, index) => (
+            <div className="habit-card" key={index}>
 
-          <div className="alt-card">
-            <h3>Cloth Shopping Bags</h3>
-            <p>
-              Use cloth or jute bags instead of plastic bags while shopping.
-            </p>
-          </div>
+              <div className="habit-icon">
+                {item.icon}
+              </div>
 
-          <div className="alt-card">
-            <h3>Bamboo / Metal Straws</h3>
-            <p>
-              Switch to reusable straws made of bamboo or metal instead of plastic ones.
-            </p>
-          </div>
+              <h3>{item.title}</h3>
 
-          <div className="alt-card">
-            <h3>Refillable Containers</h3>
-            <p>
-              Choose refillable containers for food storage and daily use items.
-            </p>
-          </div>
+              <div className="habit-tags">
+                <span>{item.impact}</span>
+                <span>{item.difficulty}</span>
+              </div>
 
-          <div className="alt-card">
-            <h3>Say No to Single-Use Plastic</h3>
-            <p>
-              Avoid items like plastic cutlery, cups, and packaging whenever possible.
-            </p>
+              <p>{item.text}</p>
+
+            </div>
+          ))}
+
+        </div>
+
+        <div className="challenge-box">
+
+          <h2>
+            Your 7-Day Eco Challenge 🌱
+          </h2>
+
+          <p>
+            Pick just one habit from above and practice it for the next 7 days.
+            Small actions repeated consistently create meaningful change.
+          </p>
+
+          <div className="challenge-steps">
+            <span>Day 1: Choose a habit</span>
+            <span>Day 3: Stay consistent</span>
+            <span>Day 5: Inspire someone</span>
+            <span>Day 7: Make it permanent</span>
           </div>
 
         </div>
 
       </div>
-
     </section>
   );
 };
