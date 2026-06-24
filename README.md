@@ -1,4 +1,4 @@
-# 🌍 PlasticFree Future
+# 🌍 EcoWave
 
 A responsive React.js website built to raise awareness about plastic pollution and encourage sustainable lifestyle choices.
 
