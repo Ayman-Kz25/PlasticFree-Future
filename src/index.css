@@ -366,7 +366,6 @@
 }
 
 /* Join - Page */
-/* Join - Page */
 .join {
   @apply min-h-screen flex items-center justify-center px-6 py-32 bg-green-50;
 }
