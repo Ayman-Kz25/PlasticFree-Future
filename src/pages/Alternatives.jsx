@@ -1,46 +1,41 @@
 import {
-  FaTint,
-  FaShoppingBag,
-  FaLeaf,
-  FaBoxOpen,
-  FaBan,
-} from "react-icons/fa";
+  FaBottleWater,
+  FaBagShopping,
+  FaGlassWater,
+  FaBox,
+  FaUtensils,
+} from "react-icons/fa6";
 
 const alternatives = [
   {
-    icon: <FaTint />,
-    title: "Reusable Water Bottle",
-    impact: "High Impact",
-    difficulty: "Easy",
-    text: "Carry a reusable bottle and avoid purchasing single-use plastic bottles.",
+    old: "Plastic Bottles",
+    icon: <FaBottleWater />,
+    replacement: "Reusable Water Bottles",
+    result: "Less plastic waste every single day",
   },
   {
-    icon: <FaShoppingBag />,
-    title: "Cloth Shopping Bags",
-    impact: "High Impact",
-    difficulty: "Easy",
-    text: "Keep reusable bags with you for grocery shopping and daily errands.",
+    old: "Plastic Bags",
+    icon: <FaBagShopping />,
+    replacement: "Cloth or Jute Bags",
+    result: "Cleaner streets and healthier oceans",
   },
   {
-    icon: <FaLeaf />,
-    title: "Bamboo & Metal Straws",
-    impact: "Medium Impact",
-    difficulty: "Easy",
-    text: "Replace disposable plastic straws with reusable alternatives.",
+    old: "Plastic Straws",
+    icon: <FaGlassWater />,
+    replacement: "Metal or Bamboo Straws",
+    result: "Reduced single-use plastic consumption",
   },
   {
-    icon: <FaBoxOpen />,
-    title: "Refillable Containers",
-    impact: "High Impact",
-    difficulty: "Medium",
-    text: "Store food and household items in reusable containers instead of disposable packaging.",
+    old: "Disposable Containers",
+    icon: <FaBox />,
+    replacement: "Refillable Containers",
+    result: "Lower household waste generation",
   },
   {
-    icon: <FaBan />,
-    title: "Avoid Single Use Plastics",
-    impact: "Very High Impact",
-    difficulty: "Medium",
-    text: "Say no to disposable cups, cutlery, plates and unnecessary plastic packaging.",
+    old: "Plastic Cutlery",
+    icon: <FaUtensils />,
+    replacement: "Reusable Utensils",
+    result: "A more sustainable daily lifestyle",
   },
 ];
 
@@ -53,64 +48,68 @@ const Alternatives = () => {
         <div className="alternatives-header">
 
           <span className="alternatives-badge">
-            Start Today
+            Better Choices
           </span>
 
           <h1 className="alternatives-title">
-            Small Habits. Big Environmental Impact.
+            Small Changes Today.
+            A Cleaner Tomorrow.
           </h1>
 
           <p className="alternatives-subtitle">
-            You don't need to change everything overnight.
-            A few simple choices can significantly reduce plastic waste.
+            Sustainability doesn't always require major sacrifices.
+            Sometimes the best solution is simply choosing a better alternative.
           </p>
 
         </div>
 
-        <div className="alternatives-grid">
+        <div className="alternatives-showcase">
 
           {alternatives.map((item, index) => (
-            <div className="habit-card" key={index}>
+            <div className="alternative-card" key={index}>
 
-              <div className="habit-icon">
-                {item.icon}
+              <div className="old-choice">
+                {item.old}
               </div>
 
-              <h3>{item.title}</h3>
-
-              <div className="habit-tags">
-                <span>{item.impact}</span>
-                <span>{item.difficulty}</span>
+              <div className="arrow">
+                ↓
               </div>
 
-              <p>{item.text}</p>
+              <div className="new-choice">
+
+                <div className="alt-icon">
+                  {item.icon}
+                </div>
+
+                <h3>{item.replacement}</h3>
+
+              </div>
+
+              <div className="result">
+                🌱 {item.result}
+              </div>
 
             </div>
           ))}
 
         </div>
 
-        <div className="challenge-box">
+        <div className="future-section">
 
           <h2>
-            Your 7-Day Eco Challenge 🌱
+            Every Sustainable Choice Shapes the Future
           </h2>
 
           <p>
-            Pick just one habit from above and practice it for the next 7 days.
-            Small actions repeated consistently create meaningful change.
+            Cleaner oceans, healthier wildlife, safer ecosystems and a better
+            planet begin with everyday decisions made by millions of people.
           </p>
-
-          <div className="challenge-steps">
-            <span>Day 1: Choose a habit</span>
-            <span>Day 3: Stay consistent</span>
-            <span>Day 5: Inspire someone</span>
-            <span>Day 7: Make it permanent</span>
-          </div>
 
         </div>
 
       </div>
+
     </section>
   );
 };

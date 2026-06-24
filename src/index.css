@@ -397,8 +397,6 @@
 }
 
 /* Alternatives - Page */
-/* Alternatives Page */
-
 .alternatives {
   @apply bg-green-50 py-24 md:py-32 px-4 sm:px-6;
 }
@@ -407,135 +405,87 @@
   @apply max-w-7xl mx-auto;
 }
 
-/* Header */
-
 .alternatives-header {
   @apply text-center max-w-4xl mx-auto mb-20;
 }
 
 .alternatives-badge {
-  @apply inline-block
-  px-4 py-2
-  rounded-full
-  bg-green-100
-  text-green-800
-  font-semibold
-  text-sm
-  mb-5;
+  @apply inline-block px-4 py-2 rounded-full
+  bg-green-100 text-green-800
+  text-sm font-semibold mb-5;
 }
 
 .alternatives-title {
   @apply text-3xl sm:text-4xl md:text-5xl lg:text-6xl
-  font-bold
-  text-green-900
-  mb-6;
+  font-bold text-green-900 mb-6;
 }
 
 .alternatives-subtitle {
-  @apply text-base md:text-lg
-  text-gray-600
-  leading-relaxed;
+  @apply text-base md:text-lg text-gray-600;
 }
 
-/* Grid */
-
-.alternatives-grid {
-  @apply grid
-  grid-cols-1
-  md:grid-cols-2
-  lg:grid-cols-3
-  gap-6;
+.alternatives-showcase {
+  @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6;
 }
 
-/* Habit Card */
-
-.habit-card {
-  @apply bg-white
-  rounded-3xl
-  p-7
-  shadow-md
-  transition-all duration-300;
+.alternative-card {
+  @apply bg-white rounded-3xl p-8
+  shadow-md transition-all duration-300
+  text-center;
 }
 
-.habit-card:hover {
-  @apply -translate-y-2 shadow-xl;
+.alternative-card:hover {
+  @apply shadow-xl -translate-y-2;
 }
 
-.habit-icon {
-  @apply w-16 h-16
+.old-choice {
+  @apply text-gray-500 line-through font-medium;
+}
+
+.arrow {
+  @apply text-3xl text-green-700 my-4;
+}
+
+.new-choice h3 {
+  @apply text-xl font-bold text-green-900 mt-4;
+}
+
+.alt-icon {
+  @apply w-16 h-16 mx-auto
   rounded-2xl
   bg-green-100
   text-green-800
   text-2xl
-  flex items-center justify-center
-  mb-5;
+  flex items-center justify-center;
 }
 
-.habit-card h3 {
-  @apply text-2xl
+.result {
+  @apply mt-6
+  bg-green-50
+  rounded-xl
+  p-4
+  text-green-800
+  font-medium;
+}
+
+.future-section {
+  @apply mt-20
+  text-center
+  max-w-4xl
+  mx-auto;
+}
+
+.future-section h2 {
+  @apply text-3xl md:text-4xl
   font-bold
   text-green-900
   mb-4;
 }
 
-.habit-card p {
-  @apply text-gray-600
+.future-section p {
+  @apply text-lg
+  text-gray-600
   leading-relaxed;
-}
-
-/* Tags */
-
-.habit-tags {
-  @apply flex flex-wrap gap-2 mb-4;
-}
-
-.habit-tags span {
-  @apply px-3 py-1
-  rounded-full
-  bg-green-50
-  text-green-800
-  text-sm
-  font-medium;
-}
-
-/* Challenge Box */
-
-.challenge-box {
-  @apply mt-20
-  bg-green-800
-  rounded-3xl
-  p-8 md:p-12
-  text-center;
-}
-
-.challenge-box h2 {
-  @apply text-2xl md:text-4xl
-  font-bold
-  text-white
-  mb-4;
-}
-
-.challenge-box p {
-  @apply text-green-100
-  max-w-3xl
-  mx-auto
-  mb-8;
-}
-
-.challenge-steps {
-  @apply flex
-  flex-col
-  md:flex-row
-  justify-center
-  gap-4;
-}
-
-.challenge-steps span {
-  @apply bg-white/10
-  text-white
-  px-5 py-3
-  rounded-full
-  backdrop-blur-sm;
 }
 
 /* TakeAction - Page */
