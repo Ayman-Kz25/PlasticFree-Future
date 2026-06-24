@@ -14,17 +14,17 @@
 }
 
 .navbar-home .nav-link:hover {
-  @apply text-green-200;
+  @apply text-green-400;
 }
 
 
 /* Navbar - Component */
 .navbar {
-  @apply fixed top-0 left-0 z-50 w-full;
+  @apply fixed top-0 left-0 z-50 w-full bg-transparent;
 }
 
 .navbar-scrolled {
-  @apply bg-white/40 border-b-white/40 backdrop-blur-lg transition-all duration-300;
+  @apply bg-white/80 backdrop-blur-lg border-b border-green-100 shadow-sm transition-all duration-300;
 }
 
 .navbar-container {
@@ -45,6 +45,22 @@
 
 .navbar-links {
   @apply hidden lg:flex items-center gap-8;
+}
+
+.home-nav .nav-link {
+  @apply text-white;
+}
+
+.home-nav .nav-link:hover {
+  @apply text-green-100;
+}
+
+.home-nav .nav-active {
+  @apply text-white;
+}
+
+.home-nav .nav-active::after {
+  @apply bg-white;
 }
 
 .nav-link {
@@ -73,11 +89,11 @@
 }
 
 .mobile-menu-btn {
-  @apply lg:hidden text-2xl text-green-800;
+  @apply lg:hidden text-2xl text-white;
 }
 
 .mobile-menu {
-  @apply lg:hidden absolute top-full left-0 w-full flex flex-col items-center gap-4 px-6 py-6 bg-white/95 backdrop-blur-lg shadow-lg border-t border-green-100;
+  @apply lg:hidden absolute top-0 left-0 w-full flex flex-col items-center gap-4 px-6 py-6 bg-white/95 backdrop-blur-lg shadow-lg border-t border-green-100;
   animation: dropdown 0.3s ease;
 }
 
@@ -156,7 +172,7 @@
 
 /* Home - Page */
 .home {
-  @apply min-h-screen flex items-center relative overflow-hidden;
+  @apply min-h-screen flex items-center relative overflow-hidden py-20;
   background-image: url("https://res.cloudinary.com/dhjf7rok5/image/upload/v1782301574/samples/ChatGPT_Image_Jun_24_2026_04_45_07_PM_uj3mxc.png");
   background-size: cover;
   background-position: center;
@@ -185,8 +201,6 @@
   border border-white/10;
 }
 
-/* Badge */
-
 .home-badge {
   @apply inline-flex items-center gap-2
   px-4 py-2
@@ -198,8 +212,6 @@
   mb-6;
 }
 
-/* Title */
-
 .home-title {
   @apply text-4xl
   sm:text-5xl
@@ -207,26 +219,27 @@
   font-bold
   text-white
   leading-tight
+  text-center
+  sm:text-left
   mb-5;
 }
-
-/* Subtitle */
 
 .home-subtitle {
   @apply text-base
   sm:text-lg
   lg:text-xl
+  text-center
+  sm:text-left
   text-white/90
   leading-relaxed
   max-w-2xl
   mb-8;
 }
 
-/* Buttons */
-
 .home-buttons {
   @apply flex
   flex-col
+  items-center
   sm:flex-row
   gap-4;
 }

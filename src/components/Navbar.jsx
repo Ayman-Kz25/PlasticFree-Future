@@ -1,11 +1,14 @@
-import { NavLink } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 import { FaLeaf } from "react-icons/fa";
 import { useEffect, useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 
 const Navbar = () => {
+  const location = useLocation();
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+
+  const isHome = location.pathname === "/";
 
   useEffect(() => {
     const handleScroll = () => {
@@ -20,7 +23,7 @@ const Navbar = () => {
   }, []);
 
   return (
-    <nav className={`navbar ${scrolled ? "navbar-scrolled" : ""}`}>
+    <nav className={`navbar ${scrolled || !isHome ? "navbar-scrolled" : ""}`}>
       <div className="navbar-container">
         {/* Logo */}
         <NavLink to="/" className="navbar-logo">
@@ -29,7 +32,7 @@ const Navbar = () => {
         </NavLink>
 
         {/* Links */}
-        <ul className="navbar-links">
+        <ul className={`navbar-links ${isHome && !scrolled ? "home-nav" : ""}`}>
           <li>
             <NavLink
               to="/"
