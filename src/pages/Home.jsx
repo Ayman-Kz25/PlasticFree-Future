@@ -24,11 +24,6 @@ const Home = () => {
             Take Action
           </NavLink>
         </div>
-
-        <div className="home-scroll">
-          ↓ Scroll to explore
-        </div>
-
       </div>
 
     </section>

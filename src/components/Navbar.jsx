@@ -1,5 +1,5 @@
 import { NavLink } from "react-router-dom";
-import { FaRecycle } from "react-icons/fa";
+import { FaLeaf } from "react-icons/fa";
 import { useEffect, useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 
@@ -23,10 +23,10 @@ const Navbar = () => {
     <nav className={`navbar ${scrolled ? "navbar-scrolled" : ""}`}>
       <div className="navbar-container">
         {/* Logo */}
-        <div className="navbar-logo">
-          <FaRecycle className="logo-icon" />
-          <h1>PlasticFree Future</h1>
-        </div>
+        <NavLink to="/" className="navbar-logo">
+          <FaLeaf className="logo-icon" />
+          <h1>EcoWave</h1>
+        </NavLink>
 
         {/* Links */}
         <ul className="navbar-links">

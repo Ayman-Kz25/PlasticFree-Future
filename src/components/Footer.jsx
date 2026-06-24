@@ -11,7 +11,7 @@ const Footer = () => {
         <div className="footer-brand">
           <div className="footer-logo">
             <FaRecycle className="footer-icon" />
-            <h2>PlasticFree Future</h2>
+            <h2>EcoWave</h2>
           </div>
 
           <p>
@@ -32,7 +32,7 @@ const Footer = () => {
 
       {/* Bottom */}
       <div className="footer-bottom">
-        © 2026 PlasticFree Future. All rights reserved.
+        © {new Date().getFullYear()} EcoWave. All rights reserved.
       </div>
 
     </footer>

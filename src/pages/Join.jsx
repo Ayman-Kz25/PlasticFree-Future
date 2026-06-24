@@ -27,7 +27,7 @@ Message: ${formData.message}`;
 
       <div className="join-container">
 
-        <h1>Join the Movement ♻️</h1>
+        <h1>Join the Movement 🌱</h1>
 
         <p>
           Want to support environmental awareness? Contact us and be part of the change.
