@@ -89,7 +89,7 @@
 }
 
 .mobile-menu-btn {
-  @apply lg:hidden text-2xl text-white;
+  @apply lg:hidden text-2xl text-green-800;
 }
 
 .mobile-menu {
